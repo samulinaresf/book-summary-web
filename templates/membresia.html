@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+    
+    <!-- Contenido membresia -->
+  <div class="container-membresia">
+    <h1 class="title-box">Membresia</h1><br><br>
+    <p class="box">
+        Disfruta de los resúmenes de los mejores libros de amazon sin tener que desperdiciar tu tiempo.
+    </p>
+    <br><br><br>
+    <img class="img-box" src="{% static 'imagenes/banner-membresia.png' %}" alt="Imagen de la membresía">
+    <br>
+    <br>
+    <br>
+  <div>
+    <div class="tarifa-mensual">
+      <h2 class="title-box">Tarifa mensual</h2>
+      <p class="box">Disponible próximamente</p>
+      <a href="#" class="suscripcion-mensual">No disponible</a><br><br><br>
+    </div>
+    <div class="tarifa-anual">
+      <h2 class="title-box">Tarifa anual</h2>
+      <p class="box">Disponible próximamente</p>
+      <a href="#" class="suscripcion-anual">No disponible</a><br><br><br>
+    </div>
+  </div>
+    <a class="suscribed" href="#">Ya estoy suscrito</a>
+    <br>
+</div>
+{% endblock %}

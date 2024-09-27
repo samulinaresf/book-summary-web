@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandr.ia - Inicio de Sesión</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <h1 class="titulo">Iniciar Sesión</h1>
+    <form class="formulario" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li class="box">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <br>
+    <br>
+    <div class="form-registro">
+        <p class="registro">Si aún no tienes una cuenta regístrate.</p>
+        <a href="{% url 'registro' %}" class="enlace-registro">Registro</a>
+        <button type="box" onclick="window.history.back()">Atrás</button>
+    </div>
+</body>
+</html>

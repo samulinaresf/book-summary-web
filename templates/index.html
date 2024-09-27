@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content%}
+    
+    <!-- Imagen y artículo -->
+<div>
+    <section>
+        <br>
+        <br>
+        <p class="box">Alejandría fue una de las bibliotecas más grandes del mundo, Alejandr.IA lo será a su manera</p>
+    </section>
+    <br>
+    <img class="img-box" src="{% static 'imagenes/alejandria-robots.png' %}" alt="Imagen de robots en Alejandría">
+    <br><br><br><br><br>
+    <article class="box">
+        En promedio, una persona tarda entre 6 y 10 horas para completar un libro asumiendo una velocidad de lectura de 200 a 300 palabras por minuto. 
+        En esta página podrás ahorrar mucho de este tiempo.
+    </article><br><br>
+    <img class="img-box" src="{% static 'imagenes/ahorra-tiempo.png' %}" alt="Ahorrar tiempo">
+    <br><br><br><br><br>
+</div>
+
+<!-- Temáticas diversas -->
+<div>
+    <h2 class="title-box">Desubre libros de diversas temáticas</h2><br><br><br>
+    <article class="box">
+        Aquí podrás encontrar resúmenes de libros, estudios, papers, whitepapers... 
+        y un largo etcétera. Todo de diversas temáticas, aunque te resultará muy 
+        fácil encontrar aquel contenido que más te interese.
+    </article>
+    <br><br><br>
+    <img class="img-box" src="{% static 'imagenes/diversas-tematicas.png' %}" alt="Libros de diversas temáticas">
+    <br><br><br>
+</div>
+
+<!-- Libros para todas las edades -->
+<div>
+    <br>
+    <br>
+    <h2 class="title-box">Descubre nuestros resúmenes animados</h2>
+    <br>
+    <br>
+    <article class="box">Un espacio de resúmenes de libros animados para todas las edades.</article>
+    <br>
+    <br>
+    <img class="img-box" src="{% static 'imagenes/rincon-infantil.png' %}" alt="Imagen del rincón infantil">
+</div>
+
+<!-- Botón de unirse a la membresía -->
+<div>
+    <br>
+    <h2><a href="{% url 'membresia' %}" class="boton-suscribirse">Únete a la membresía</a></h2>
+    <br>
+</div>
+    
+{% endblock %}
