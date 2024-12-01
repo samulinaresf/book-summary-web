@@ -4,84 +4,82 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandr.ia</title>
+    <title>AlejandrIA</title>
     <link rel="stylesheet" href="{% static 'css/static.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
 </head>
 <body>
-    <!-- Creando el container central -->
+    <!-- Container del encabezado -->
     {% block header %}
-    <div class="container">
-        <!-- Encabezado -->
-            <img src="{% static 'imagenes/logo-alejandria-sin-fondo.png' %}" alt="Logo">
-            <br>
-            <header>
-                <h1 class="titulo-principal">Alejandr.IA</h1>
-            </header>
-            <main>
-                {% if user.is_authenticated %}
-                <ul class="sesion">
-                    <li><a href="{% url 'mi-perfil' %}" class="perfil">Mi cuenta</a></li>
-                    <li><form action={% url 'cerrar-sesion' %} method="post">
-                        {% csrf_token %}
-                        <button action="submit" class="cerrar-sesion">Cerrar sesión</button></li>
+    <div class="container header">
+        <div class="box-container container-img">
+            <img src="{% static 'imagenes/logo-alejandria-sin-fondo.png' %}" alt="Logo" title="Logo">
+        </div>
+        <div class="box-container container-title">
+            <h1>AlejandrIA</h1>
+        </div>
+        <div class="container-box container-session">
+            {% if user.is_authenticated %}  
+            <ul class="session">
+                <li><a href="{% url 'mi-perfil' %}" class="session-button">Mi cuenta</a></li>
+                <li><form action={% url 'cerrar-sesion' %} method="post">
+                    {% csrf_token %}
+                    <button action="submit" class="session-button session-submit-button">Cerrar sesión</button>
                     </form>
-                </ul>
-                {% else %}
-                <ul class="sesion">
-                    <li><a href="{% url 'inicio-sesion' %}" class="inicio-sesion">Inicio sesión</a></li>
-                    <li><a href="{% url 'registro' %}" class="registro">Registro</a></li>
-                </ul>
-                {% endif %}
-            </main>   
-    </div>
-    {% endblock %}
-    {% block menu %}
-    <!-- Menú principal de la parte derecha -->
-    <div class="right">
-    </div>
-    {% endblock %}
-    <div class="center">
-        <nav>
-            <ul>
-                <li><a href="{% url 'index' %}" class="inicio">Inicio </a></li>
-                <li><a href="{% url 'membresia' %}" class="membresia"> Membresía </a></li>
-                <li><a href="{% url 'resumenes' %}" class="resumenes"> Resumenes </a></li>
+                </li>
             </ul>
-        </nav>
-    {% block content %}
-    <!-- Aquí va el contenido específico de cada página -->
-    {% endblock %}
+            {% else %}
+            <ul class="sesion">
+                <li><a href="{% url 'inicio-sesion' %}" class="session-button">Inicio sesión</a></li>
+                <li><a href="{% url 'registro' %}" class="session-button">Registro</a></li>
+            </ul>
+            {% endif %}
+        </div>   
     </div>
-    <!-- Botones de RRSS -->
-    
-    
+    {% endblock %}
+
+    <!-- Menú principal -->
+    {% block menu %}
+    <div class="container menu">
+        <div class="container-box">
+            <ul class="main-menu">
+                <li><a href="{% url 'index' %}" class="container-box-item">Inicio </a></li>
+                <li><a href="{% url 'membresia' %}" class="container-box-item"> Membresía </a></li>
+                <li><a href="{% url 'resumenes' %}" class="container-box-item"> Resumenes </a></li>
+                <li><a href="#" class="container-box-item"> Blog </a></li>
+            </ul>
+        </div>
+    </div>
+    {% endblock %}
+
+    <!-- Aquí va el contenido específico de cada página -->
+    {% block content %}
+    {% endblock %}
+
     <!-- Pie de página -->
      {% block footer %}
-    <footer>
-        <div>
-            <br>
+     <div class="container footer">
+        <div class="container-box social-icons">    
             <ul class="iconos-rrss">
                 <li class="icono-youtube"><a href="https://www.youtube.com/@alejandr.ia_"><img src="{% static 'imagenes/logo-youtube-32px.png' %}" alt="Logo de Youtube"></a></li>
                 <li class="icono-paypal"><a href="https://paypal.me/samulinaresf?country.x=ES&locale.x=es_ES"><img src="{% static 'imagenes/logo-paypal-32px.png' %}" alt="Logo de Paypal"></a></li>
                 <li class="icono-spotify"><a href="https://open.spotify.com/show/6Los0BS2h1yN8DLyBjnyht?si=890be587be9f42af"><img src="{% static 'imagenes/logo-spotify-30px.png' %}" alt="Logo de Spotify"></a></li>
             </ul>
-            <br>
         </div>
-        <div class="footer-menu">
-            <ul class="footer-text">
-                <li class="aviso-legal"><a href="{% url 'aviso_legal' %}" class="active">Aviso legal</a></li>
-                <li><a href="{% url 'politica_privacidad' %}" class="active">Política de privacidad</a></li>
-                <li><a href="{% url 'politica_cookies' %}" class="active">Política de cookies</a></li>
-                <li><a href="{% url 'faq' %}" class="active">FAQ</a></li>
-                <li><a href="{% url 'sobre_nosotros' %}" class="active">Sobre nosotros</a></li>
-                <li><a href="{% url 'contacto' %}" class="active">Contacto</a></li>
+        <div class="container-box footer-menu">
+            <ul class="container-box-list">
+                <li><a href="{% url 'aviso_legal' %}" class="container-box-item active">Aviso legal</a></li>
+                <li><a href="{% url 'politica_privacidad' %}" class="container-box-item active">Política de privacidad</a></li>
+                <li><a href="{% url 'politica_cookies' %}" class="container-box-item active">Política de cookies</a></li>
+                <li><a href="{% url 'faq' %}" class="container-box-item active">FAQ</a></li>
+                <li><a href="{% url 'sobre_nosotros' %}" class="container-box-item active">Sobre nosotros</a></li>
+                <li><a href="{% url 'contacto' %}" class="container-box-item active">Contacto</a></li>
             </ul>
         </div>
-        <p class="copyright">copyright &copy; Samuel Linares, 2024 Todos los derechos reservados</p>
-    </footer>
+        <div class="container-box">
+            <p class="copyright">copyright &copy; Samuel Linares, 2024 Todos los derechos reservados</p>
+        </div>
+    </div>
     {% endblock %}
 </body>
 </html>

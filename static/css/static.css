@@ -1,66 +1,3 @@
-/* Tipografía que vamos a usar */
-
-.lato-thin {
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-.lato-light {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-.lato-regular {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-.lato-bold {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-.lato-black {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-.lato-thin-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-.lato-light-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-.lato-black-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
-.lato-bold-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-.lato-regular-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-
-
 /* Configuración del body */
 
 body{
@@ -69,130 +6,148 @@ body{
   background: linear-gradient(to bottom, #1c1c1c, #464343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/*Añadiendo estilo a la página principal  */
-
-.titulo-principal,.titulo-descripcion,.descripcion{
-    color: #e4dddd;
-}
-
 .container{
   text-align: center;
   font-size: large;
-  width:auto;
-  height: 300px;
-  margin-left: -1px;
-  margin-right: -1px;
+  width: 100%;
+  margin: 20px;
+  border: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.container img{
-  width: 250px;
-  height:auto;
+.header{
+  display: flex;
 }
 
-.right{
-  text-align: right;
+.container-box{
+  margin: 1em;
+  padding: 1em;
+  border: hidden;
+  box-sizing: border-box;
+  width:100%
 }
 
-.center{
-  text-align: center;
+.container-img{
+  width: 20%;
 }
 
-
-.left{
-  text-align: left;
-}
-
-.titulo-principal  {
-    font-family: "Lato", sans-serif;
-    height: auto;
-    width: auto;
-    text-shadow: 3px 3px #8a8a8a;
-
-    font-size: 4em;
-}
-
-.titulo-descripcion {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    width: auto;
-    height: auto;
-    border: 2px hidden;
-    text-align: center;
-    font-size: 2em;
-    color: #f4ff5f
-}
-
-.descripcion {
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    border: 2px #f00 hidden;
-    text-align: center;
-}
-
-.sesion, .perfil{
-  text-align: right;
-}
-
-.sesion li{
-  list-style-type: none;
+.container-img img{
+  width: 100%;
+  height: auto;
   padding: 0;
+}
+
+.container-title{
+  width: 60%;
+}
+
+.container-title h1{
+  color: #e4dddd;
+  font-family: "Lato Bold", sans-serif;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.container-session{
+  width: 20%;
+}
+
+.session ul{
+  list-style-type: none;
+  padding: 5px;
   display: inline;
 }
 
-.sesion li a{
+.main menu ul li{
+  font-size: 0.7rem;
+  font-weight: 0.7rem;
+  font-family: "Lato Bold","sans-serif";
+  color: #e4dddd;
+}
+
+.session li a{
   text-decoration: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;  
+  font-family: "Lato Black";
   color: #9c9494;
   font-size: 70%;
   margin-right: 10px;
 }
 
-.inicio-sesion:hover,.registro:hover,.cerrar-sesion:hover{  
+.session-submit-button{
+  text-decoration: none;
+  font-family: "Lato Black";
+  color: #9c9494;
+  font-size: 70%;
+  margin-right: 10px;
+  background-color: none;
+  border: none;
+}
+
+.session-button:hover{  
   color: #c9bdbd;
   font-size: 90%;
   transition-duration: 1s;
 }
 
-nav{
+/*Añadiendo estilo a la página principal*/
+
+.container-box p{
+    font-family: "Lato Bold";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.7rem;
+    margin: 20px;
+    padding: 20px;
+    border: 2px hidden;
+    text-align: center;
+    /*color: #e4dddd;*/
+    color: red;
+}
+
+.box-container{
+  margin: 10px;
+}
+
+.container-img{
+  align-items: start;
+  display: flex;
+}
+
+.container-title{
+  align-items: center;
+  display: flex;
+}
+
+.container-session{
+  align-items: end;
+  display: flex;
+}
+
+.container-box-item{
   text-align: center;
+  padding:5px;
+  font-family: "Lato Bold";
+  box-sizing: border-box;
+  font-family: "Lato Bold";
 }
 
-nav ul{
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li{
+.main-menu{
   display: inline;
-}
-
-nav ul li a{
   text-decoration: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-style: normal;  
-  color: #ebe5e5;
-  font-size: 150%;
-  margin-right: 20px;
 }
 
-.inicio:hover,.membresia:hover,.resumenes:hover{
+.container-box-item{
+  color:#e4dddd;
+  text-decoration: none;
+  font-size: "Lato Light";
+}
+
+.container-box-item:hover{
   color: #fff5aa;
   text-decoration: underline;
   size: 200%;
   transition-duration: 1s;
-}
-
-.img-box{
-  text-align: center;
-  background-image: url("imagenes/alejandria-robots.png");
-  width: 700px;
-  height: auto;
-
 }
 
 .box{
@@ -207,15 +162,12 @@ nav ul li a{
   font-size: 1.5em;
 }
 
-.tematicas-libros{
-  text-align: center;
+.nav-box-1{
+  background: url("{% static 'imagenes/alejandria-robots.png' %}") center cover no-repeat fixed rgba(0, 0, 0, a);
 }
 
-.title-box{
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+.tematicas-libros{
+  text-align: center;
 }
 
 .boton-suscribirse{
@@ -223,18 +175,10 @@ nav ul li a{
   color: #fff;
   background-color: rgb(0, 0, 0);
   padding: 15px 50px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato Bold";
   font-weight: 700;
   font-style: normal;
   border-radius: 10px;
-}
-
-
-.titulo-rincon-infantil{
-  color: #1c1c1c;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-style: normal;
 }
 
 /* Página de 'Resúmenes'*/
@@ -417,11 +361,16 @@ footer{
     padding: 20px;
 }
 
-.iconos-rrss{
+.footer-menu ul li{
+    font-weight: 500;
+    font-size: 0.5rem;
+}
+
+.social-icons{
   text-align: center;
 }
 
-.iconos-rrss li{
+.social-icons ul li{
   display: inline;
 }
 

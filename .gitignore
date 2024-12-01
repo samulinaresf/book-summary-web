@@ -1,0 +1,8 @@
+# Ignorar el archivo .env
+#.env
+
+# Ignorar las carpetas comunes generadas por Python y Django
+#__pycache__/
+#*.pyc
+#db.sqlite3
+#staticfiles/
