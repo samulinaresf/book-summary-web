@@ -18,7 +18,9 @@ body{
 
 .header{
   display: flex;
+  background: #161616;
 }
+
 
 .container-box{
   margin: 1em;
@@ -28,27 +30,41 @@ body{
   width:100%
 }
 
-.container-img{
-  width: 20%;
-  align-items: start;
-  display: flex;
+.container-box-item a{
+  font-family: "Lato Bold", sans-serif;
+  font-size: 30px;
+  text-decoration: none;
 }
 
-.container-img img{
+.session-item{
+  padding:0 5px;
+}
+
+.session-item a, .session-item form button{
+  font-family: "Lato Bold", sans-serif;
+  text-decoration: none;
+  color:#e4dddd;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.session-item a:hover, .session-item form button:hover{
+  transition-duration: 1s;
+  font-size: 18px;
+  color: #ffee00;
+  text-decoration: underline;
+}
+
+.container-img{
+  width: 30%;
+}
+
+.container-img a img{
   width: 100%;
   height: auto;
   padding: 0;
-}
-
-.container-title{
-  width: 60%;
-}
-
-.container-title h1{
-  color: #e4dddd;
-  font-family: "Lato Bold", sans-serif;
-  font-size: 1.5rem;
-  padding: 5px;
+  box-sizing: border-box;
 }
 
 .container-session{
@@ -59,31 +75,6 @@ body{
   list-style-type: none;
   padding: 5px;
   display: inline;
-}
-
-.main menu ul li{
-  font-size: 0.7rem;
-  font-weight: 0.7rem;
-  font-family: "Lato Bold","sans-serif";
-  color: #e4dddd;
-}
-
-.session li a{
-  text-decoration: none;
-  font-family: "Lato Black";
-  color: #9c9494;
-  font-size: 70%;
-  margin-right: 10px;
-}
-
-.session-submit-button{
-  text-decoration: none;
-  font-family: "Lato Black";
-  color: #9c9494;
-  font-size: 70%;
-  margin-right: 10px;
-  background-color: none;
-  border: none;
 }
 
 .session-button:hover{  
@@ -98,24 +89,18 @@ body{
     font-family: "Lato Bold";
     font-weight: 500;
     font-style: normal;
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin: 20px;
     padding: 20px;
     border: 2px hidden;
     text-align: center;
-    /*color: #e4dddd;*/
-    color: red;
+    color: #e4dddd;
 }
 
 .container-box{
   margin: 10px;
 }
 
-
-.container-title{
-  align-items: center;
-  display: flex;
-}
 
 .container-session{
   align-items: end;
@@ -127,21 +112,26 @@ body{
   padding:5px;
   font-family: "Lato Bold";
   box-sizing: border-box;
-  font-family: "Lato Bold";
-}
-
-.main-menu{
-  display: inline;
-  text-decoration: none;
-}
-
-.container-box-item{
   color:#e4dddd;
-  text-decoration: none;
-  font-size: "Lato Light";
+  display: inline-flex;
+  margin: 10px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
-.container-box-item:hover{
+.container-box-1,.container-box-2,.container-box-3,.container-box-4{
+  font-family: "Lato Black";
+  font-weight: 500;
+  color: #e4dddd;
+  font-size: 16px;
+  padding: 5px;
+  margin: 0;
+  border: 1px hidden;
+  box-sizing: border-box;
+}
+
+
+.container-box-1:hover,.container-box-2:hover,.container-box-3:hover,.container-box-4:hover{
   color: #fff5aa;
   text-decoration: underline;
   size: 200%;
@@ -160,8 +150,19 @@ body{
   font-size: 1.5em;
 }
 
-.nav-box-1{
-  background: url("{% static 'imagenes/alejandria-robots.png' %}") center cover no-repeat fixed rgba(0, 0, 0, a);
+.nav-box-1 {
+  background: url("../imagenes/landing-img.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.nav-box-1 p{
+  font-family:sans-serif;
+  font-size: 2em;
+  padding: 20px;
+  margin: 0;
+  color: #e4dddd;
+  background-color: #0006;
+  box-sizing: border-box;
 }
 
 .tematicas-libros{
@@ -349,10 +350,6 @@ body{
 
 /* Footer */
 
-footer{
-  padding: 0;
-}
-
 .footer-menu {
     justify-content: space-between;
     align-items: flex-end;
@@ -368,30 +365,6 @@ footer{
   text-align: center;
 }
 
-.social-icons ul li{
-  display: inline;
-}
-
-.footer-text{
-    margin-bottom: 10px;
-    list-style-type: none;
-    font-size: large;
-}
-
-.footer-text{
-    display: block;
-    align-items: center;
-}
-
-.footer-text li{
-    margin-bottom: 10px;
-}
-
-.footer-text a{
-    text-decoration: none;
-    color: #e4dddd;
-}
-
 .active:hover{
   color: #fff5aa;
 }
@@ -399,6 +372,20 @@ footer{
 footer{
   text-align: center;
   color: #e4dddd;
+  background-color: #1c1c1c;
+}
+
+.footer-menu-item{
+  text-align: center;
+  padding:5px;
+  font-family: "Lato Bold";
+  box-sizing: border-box;
+  color:#e4dddd;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 
 /* Página de contacto */
