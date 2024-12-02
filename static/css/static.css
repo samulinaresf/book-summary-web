@@ -30,6 +30,8 @@ body{
 
 .container-img{
   width: 20%;
+  align-items: start;
+  display: flex;
 }
 
 .container-img img{
@@ -105,14 +107,10 @@ body{
     color: red;
 }
 
-.box-container{
+.container-box{
   margin: 10px;
 }
 
-.container-img{
-  align-items: start;
-  display: flex;
-}
 
 .container-title{
   align-items: center;
